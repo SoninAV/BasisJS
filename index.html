@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        //Задание 1
+        let name = "Artem";
+        console.log(`Привет, ${name}!`);
+
+        //Задание 2
+        let h = 30;
+        let d = 50;
+        console.log((h * d) / 2);
+
+        //Задание 3
+        let n = Math.floor(Math.random() * 56 + 12);
+        console.log(n);
+
+        //Задание 4
+        const RED = Math.floor(Math.random() * 256);
+        const GREEN = Math.floor(Math.random() * 256);
+        const BLUE = Math.floor(Math.random() * 256);
+        const ALPHA = Math.random().toFixed(2);
+
+        let color = `rgba(${RED}, ${GREEN}, ${BLUE}, ${ALPHA})`;
+        console.log(color);
+
+        //Задание 5
+        let time = Math.round(Math.random() * 2505600000 + 86400000);
+        let ms = time % 1000;
+        let s = ((time - ms) / 1000) % 60;
+        let min = ((time - ms - s * 1000) / (1000 * 60)) % 60;
+        let hour = ((time - ms - s * 1000 - min * 1000 * 60) / (1000 * 60 * 60)) % 24;
+        let day = Math.floor(time / (1000 * 60 * 60 * 24));
+
+        let result = `${time} мс — ${day} д ${hour} ч ${min} мин ${s} сек ${ms} мс`;
+        console.log(result);
+    </script>
+</body>
+</html>
